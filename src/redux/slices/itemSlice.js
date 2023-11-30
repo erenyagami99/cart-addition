@@ -19,7 +19,6 @@ const itemSlice = createSlice({
   reducers: {
     updateStatus: (state, action) => {
       const { newStatus, itemId } = action.payload;
-      console.log(itemId, newStatus, "srinivas");
       state.items = state.items.map((item) =>
         item.id === itemId ? { ...item, status: newStatus } : item
       );

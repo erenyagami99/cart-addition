@@ -300,7 +300,6 @@ const App = () => {
   const [item, setItem] = useState(0);
 
   const handleClick = (newStatus, itemId) => {
-    console.log("itemId:", itemId);
     dispatch(updateStatus({ newStatus, itemId }));
   };
   return (
@@ -455,10 +454,10 @@ const App = () => {
                         />
                       )}
                       {item.status === "Missing" && (
-                        <img src="/images/cancel-red.png" alt="/" />
+                        <img src="/images/cancel-orange.png" alt="/" />
                       )}
                       {item.status === "Missing - Urgent" && (
-                        <img src="/images/cancel-orange.png" alt="/" />
+                        <img src="/images/cancel-red.png" alt="/" />
                       )}
                       <p>Edit</p>
                     </StatusDiv>
